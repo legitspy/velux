@@ -1,3 +1,4 @@
+
 export interface Address {
   name: string;
   company?: string;
@@ -23,6 +24,14 @@ export interface ScanEvent {
   description: string;
 }
 
+export interface SimulationData {
+  timestamp: string;
+  currentLocation: string;
+  nextLocation: string;
+  distanceRemaining: string;
+  statusUpdate: string;
+}
+
 export interface Shipment {
   trackingId: string;
   status: ShipmentStatus;
@@ -35,4 +44,5 @@ export interface Shipment {
   dimensions: string;
   service: string;
   scanHistory: ScanEvent[];
+  simulationData?: SimulationData;
 }
